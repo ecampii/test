@@ -4,7 +4,7 @@
   "output": "./output",
   "helpers": {
     "WebDriverIO": {
-      "url": "http://localhost",
+      "url": "https://www.amaysim.com.au",
       "browser": "chrome"
     }
   },
