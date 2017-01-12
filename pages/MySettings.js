@@ -100,7 +100,26 @@ module.exports = {
     I.click('Cancel');
     I.waitForElement('div[id="ajax_loading"][style="display: none;"]', 50);
     I.waitForElement('div[class=\'form_info_popup reveal-modal padding-none open\']', 50);
-  }
+  },
+
+
+  SMSLimit() {
+    I.click('a[href*=\'edit_premium_sms_limit\']');
+    I.waitForElement('div[id="ajax_loading"][style="display: none;"]', 50);
+    I.click('a[id=\'cancel_settings_premium_sms_limit\']');
+    I.waitForElement('div[id="ajax_loading"][style="display: none;"]', 50);
+    I.waitForElement('div[class=\'form_info_popup reveal-modal padding-none open\']', 50);
+  },
+
+
+  autoRecharge() {
+    I.click('a[href*=\'edit_auto_recharge\']');
+    I.waitForElement('div[id="ajax_loading"][style="display: none;"]', 50);
+    I.waitForElement('div[class=\'form_info_popup reveal-modal padding-none open\']', 50);
+    I.click('a[id=\'show_settings_auto_recharge\']');
+    I.waitForElement('div[id="ajax_loading"][style="display: none;"]', 50);
+    I.waitForElement('div[class=\'form_info_popup reveal-modal padding-none open\']', 50);
+  },
 
 
 }
