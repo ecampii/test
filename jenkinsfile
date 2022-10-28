@@ -1,0 +1,17 @@
+pipeline {
+    agent 'agent47'
+    stages {
+        stage('checkout'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ecampii/test.git']]])
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                echo "run test1"
+                    sh 'python3 helloworlds.py'
+            }
+        }
+    }
+}
+    
